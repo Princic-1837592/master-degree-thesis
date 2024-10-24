@@ -1,0 +1,108 @@
+%! Author = Andrea
+%! Date = 24/01/2024
+
+% Preamble
+\documentclass[twoside, english]{sapthesis}
+
+% Packages
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{./images/}}
+\usepackage{dirtytalk}
+\usepackage{color}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+
+
+\title{Keyrtual: A Lightweight Mixed Reality Musical \\Keyboard For Smartphone}
+\author{Andrea Princic}
+\IDnumber{1837592}
+\courseorganizer{Facoltà di Ingegneria dell'Informazione, Informatica e Statistica}
+\course{Computer Science}
+\AcademicYear{2023/2024}
+\copyyear{2024}
+\advisor{Prof. Luigi Cinque}
+\authoremail{princic.1837592@studenti.uniroma1.it}
+\thesistype{Master thesis}
+\examdate{October 22, 2024}
+\examiner{Paola Velardi}
+\examiner{Luigi Cinque}
+\examiner{Daniele Friolo}
+\examiner{Fabio Galasso}
+\examiner{Marco Raoul Marini}
+\examiner{Eugenio Nerio Nemmi}
+\examiner{Salvatore Pontarelli}
+
+\setcounter{secnumdepth}{2}
+\newcommand{\algorithmautorefname}{Algorithm}
+
+
+% Document
+\begin{document}
+
+	\frontmatter
+	\maketitle
+
+	\setcounter{tocdepth}{2}
+	\tableofcontents
+
+	\mainmatter
+
+	\begin{abstract}
+		Hand gesture recognition has become a critical area of study,
+		particularly with the increasing prevalence of virtual and augmented reality technologies.
+		This thesis presents the development of Keyrtual,
+		a lightweight mixed reality musical keyboard application for smartphones.
+		The application allows users to play a virtual musical keyboard by
+		recognizing hand gestures over a physical keyboard drawn on paper.
+		Leveraging the capabilities of modern smartphone cameras and augmented reality frameworks and tools
+		like MediaPipe, this system eliminates the need for external hardware,
+		such as tracking gloves or depth sensors, making it accessible and portable.
+		The project explores the integration of OpenCV and MediaPipe for image processing and hand detection
+		in a mixed reality application developed in Unity,
+		and the possibility to involve depth-sensing technologies like LiDAR, Time-of-Flight
+		and stereo vision sensors available in modern smartphones.
+		By reproducing musical notes based on finger positioning in the physical world,
+		the application offers an immersive, educational tool that combines music and technology.
+		The study also discusses the system architecture, challenges in real-time hand tracking,
+		and the potential future enhancements in the realm of mobile AR applications.
+	\end{abstract}
+
+	\begin{acknowledgments}[Ringraziamenti]
+		Ringrazio la Fondazione TIM per aver supportato finanziariamente il progetto tramite l'iniziativa
+		Call for IDEAs -- Inclusione Sociale, e la Fondazione Anna Maria Catalano per averci guidato
+		durante tutte le fasi del concorso e per aver gestito la parte burocratica e sociale del progetto.
+
+		Ringrazio il professor Luigi Cinque e Marco Raoul Marini per aver creduto per primi nel progetto,
+		e per averci aperto le porte del VisionLab.
+
+		Ringrazio tutti i ragazzi e le ragazze del VisionLab,
+		che ci hanno fatto trovare un ambiente accogliente e amichevole oltre ogni aspettativa.
+
+		Ringrazio Valerio Venanzi, il mio partner in questa avventura che è cominciata come
+		l'ennesimo progetto di coppia da fare insieme per l'ennesimo esame.
+	\end{acknowledgments}
+
+	\input{introduction/introduction}
+
+	\input{state-of-the-art/state-of-the-art}
+
+	\input{architecture/architecture}
+
+	\input{results/results}
+
+	\input{conclusions/conclusions}
+
+	\backmatter
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\bibname}
+	\bibliographystyle{sapthesis}
+	\bibliography{bibliography}
+
+\end{document}

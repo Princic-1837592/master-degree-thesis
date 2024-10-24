@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" modified="2024-07-23T09:57:41.673Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="FOf1uEBYVFtlFD-jpERa" version="24.7.1" type="device">
+  <diagram name="Pagina-1" id="LZuhSFNjacQKE1-69Kxi">
+    <mxGraphModel dx="1225" dy="1134" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WO9yQ830fFWT-JS-abM7-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.641;entryY=0.978;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-3" target="WO9yQ830fFWT-JS-abM7-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="407" y="309" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="420" y="330" />
+              <mxPoint x="267" y="330" />
+              <mxPoint x="267" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-3" target="WO9yQ830fFWT-JS-abM7-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-3" value="Idle" style="ellipse;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="360" y="229.93" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-4" target="WO9yQ830fFWT-JS-abM7-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="210" />
+              <mxPoint x="420" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-4" value="Going up" style="ellipse;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="190" y="229.93" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-5" value="Touching" style="ellipse;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="580" y="360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-6" target="WO9yQ830fFWT-JS-abM7-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="270" />
+              <mxPoint x="720" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-6" value="Going&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;down&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="580" y="229.93" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.264;exitY=0.062;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.639;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-6" target="WO9yQ830fFWT-JS-abM7-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="601" y="232.93" as="sourcePoint" />
+            <mxPoint x="650" y="232.93" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="621" y="129.93" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-13" value="\(\text{velocity} &amp;gt; \text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="150" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-16" value="\(-\text{t} \leq \text{velocity} \leq \text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="590" y="320" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-33" value="\(\text{velocity} &amp;lt; -\text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="292.5" y="330" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-34" value="\(\text{velocity} &amp;gt; \text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="484" y="239" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-36" value="\(-\text{t} \leq \text{velocity} \leq \text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-39" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.402;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-4" target="WO9yQ830fFWT-JS-abM7-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="294.93" as="sourcePoint" />
+            <mxPoint x="200" y="244.93" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-40" value="\(\text{velocity} &amp;lt; -\text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="207.5" y="140" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.386;entryY=0.99;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WO9yQ830fFWT-JS-abM7-5" target="WO9yQ830fFWT-JS-abM7-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WO9yQ830fFWT-JS-abM7-42" value="\(\text{velocity} &amp;lt; -\text{t}\)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="400" y="370" width="85" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,10 @@
+.idea
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.synctex.gz.sum.synctex

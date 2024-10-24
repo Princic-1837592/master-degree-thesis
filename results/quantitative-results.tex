@@ -1,0 +1,104 @@
+\section{Quantitative results}\label{sec:quantitative-results}
+The experiments carried out on the application concern the two fundamental
+phases of the pipeline: the keyboard detection phase and the real-time phase.
+
+\subsection{Keyboard detection}\label{subsec:keyboard-detection}
+Experiments to evaluate the keyboard detection algorithm were carried out on 3 different types of keyboard:
+a hand-drawn keyboard, a keyboard drawn with a ruler as the one shown in~\autoref{fig:screenshot-detection-phase},
+and a keyboard printed using the preset provided by the application shown in~\autoref{fig:preset-1}.
+
+The tests were carried out in a room with artificial light coming from the ceiling
+and natural light coming from an open window.
+For each of these keyboards, the test was carried out by changing the rotation and position of
+the keyboard with respect to the natural light 4 times, performing the keyboard detection 3 times for each position,
+for a total of 12 detections per keyboard type and 36 detections in total.
+
+The evaluation of the experiments consists of comparing the result obtained from the keyboard detection, such as the
+one shown in~\autoref{fig:tiles-overlay}, with the optimal result we would expect to obtain from a perfect detector.
+Of course, we are not able to obtain the optimal result with an algorithm,
+otherwise we would use that same algorithm to do the detection.
+So to create the ground truth we used a photo editing software to manually colour
+in black and white exactly the spaces occupied by the keys.
+
+Once we had created the ground truth for all 36 photos,
+we applied the keyboard detection algorithm to each of them and compared it to the ground truth
+by doing a simple subtraction of colours to highlight individual differing pixels.
+To calculate the pixel accuracy of our detection algorithm we used the following formula
+\[
+	Accuracy = \frac{TP}{n}
+\]
+where $TP$ (true positives) is the number of pixels correctly classified by the algorithm and $n$ is the total number
+of pixels within the area bounded by the perimeter, as can be seen in~\autoref{fig:screenshot-detection-phase}.
+We used the number of pixels inside the perimeter and not the total number of pixels in the image because doing so
+would have produced higher but untrue percentages, as the algorithm only searches for the keyboard in
+the area of the image bounded by the perimeter and not in the entire image.
+
+As can be seen in~\autoref{tab:keyboard-detection-accuracy},
+the results for the detection algorithm are excellent for each type of keyboard.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|l|}
+		\cline{2-2}
+		& Pixel accuracy               \\ \hline
+		\multicolumn{1}{|l|}{Hand-drawn}       & \multicolumn{1}{c|}{95.00\%} \\ \hline
+		\multicolumn{1}{|l|}{Drawn with ruler} & \multicolumn{1}{c|}{96.74\%} \\ \hline
+		\multicolumn{1}{|l|}{Printed}          & \multicolumn{1}{c|}{97.69\%} \\ \hline
+	\end{tabular}
+	\caption{Pixel accuracy of keyboard detection algorithm}
+	\label{tab:keyboard-detection-accuracy}
+\end{table}
+
+Unfortunately, we did not conduct the same experiment for the keyboard detection algorithm in the old prototype,
+so we cannot compare the results.
+However, based on our experience with both algorithms,
+we can state with absolute certainty that the new algorithm is much better performing than the old one,
+which was only able to detect straight lines, needed the additional step of background subtraction,
+and didn't even produce a visible result like the new one does.
+
+\subsection{Real-time phase}\label{subsec:real-time-phase-results}
+To evaluate the real-time phase we used a method similar to the one used in the old prototype:
+we played a series of notes on the keyboard and counted the times in which the application reacted correctly or not.
+
+In order to evaluate the performance of the application's real-time phase according to its accuracy,
+precision, and recall, we needed to calculate the amount of true positives ($TP$), true negatives ($TN$),
+false positives ($FP$) and false negatives ($FN$).
+The meaning of these terms in our application is schematized in~\autoref{tab:tp-tn-fp-fn}.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|l|l|}
+		\cline{2-3}
+		& User plays                & User does not play        \\ \hline
+		\multicolumn{1}{|l|}{Application plays}         & \multicolumn{1}{c|}{$TP$} & \multicolumn{1}{c|}{$FP$} \\ \hline
+		\multicolumn{1}{|l|}{Application does not play} & \multicolumn{1}{c|}{$FN$} & \multicolumn{1}{c|}{$TN$} \\ \hline
+	\end{tabular}
+	\caption{Meaning of $TP$, $TN$, $FP$ and $FN$ in our application}
+	\label{tab:tp-tn-fp-fn}
+\end{table}
+
+To achieve the maximum precision in calculating these values, we modified the real-time algorithm to be able to save
+each frame associated with a label indicating whether in that frame the algorithm detected a touch or not.
+After the recording, we manually checked each frame with the corresponding label and counted if it was a $TP$, $TN$, $FP$ or $FN$.
+
+In this way we carried out 3 experiments.
+In each experiment the user had to press a finger on all the keys of the keyboard in order from left to right.
+The results of the experiments are shown in~\autoref{tab:real-time-results},
+together with the results from the old prototype.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|l|l|l|}
+		\cline{2-4}
+		& Accuracy                      & Precision                     & Recall                        \\ \hline
+		\multicolumn{1}{|l|}{Old prototype} & \multicolumn{1}{|c|}{90.27\%} & \multicolumn{1}{|c|}{56.87\%}   & \multicolumn{1}{|c|}{99.40\%} \\ \hline
+		\multicolumn{1}{|l|}{New version}   & \multicolumn{1}{|c|}{87.40\%} & \multicolumn{1}{|c|}{80.23\%}   & \multicolumn{1}{|c|}{81.18\%} \\ \hline
+	\end{tabular}
+	\caption{Comparison of real-time phase between old prototype and current version}
+	\label{tab:real-time-results}
+\end{table}
+
+The comparison between the old and the new version highlights how the real-time phase of the application is now much
+more precise than before, and on average more stable and reliable.
+The recall of the new version is much lower than before, but this is because in the old version there were very few
+false negatives thanks to the presence of the Leap Motion Controller.

@@ -1,0 +1,67 @@
+\section{Depth vision on smartphone}\label{sec:depth-vision-on-smartphone}
+With the advent of smartphones equipped with powerful sensors and advanced cameras,
+depth sensing has become accessible and usable in numerous applications.
+It is mainly used in smartphones as an aid to the camera, to capture additional
+information about the scene being framed and to improve sharpness and focus in photographs,
+but it can also be used outside of simple photography apps, such as in augmented reality apps.
+
+\subsection{Depth sensors on smartphone}\label{subsec:depth-sensors-on-smartphone}
+Modern smartphones are often equipped with depth sensors that exploit different technologies,
+such as LiDAR (Light Detection and Ranging) and ToF (Time-of-Flight).
+These sensors calculate the distance to objects by emitting a light or laser pulse and measuring the
+time it takes for it to return to the sensor after hitting an object.
+
+\paragraph{LiDAR}
+It uses laser pulses to create three-dimensional maps of the environment.
+It is particularly useful in low light conditions and provides highly accurate depth data.
+It can also measure the direction and intensity of the reflected signal,
+providing three-dimensional information on the shape and structure of objects.
+In smartphones, LiDAR greatly enhances AR capabilities, enabling more realistic and interactive applications.
+This type of sensor can be found on Pro and Pro Max models of iPhone since the iPhone 12.
+
+\paragraph{ToF}
+It works similarly to LiDAR, but uses infrared light instead of a laser pulse to measure distance.
+This type of sensor is often cheaper and less accurate
+than LiDAR and does not provide information about the shape of objects,
+but is still effective for many applications, including indoor mapping and object detection.
+
+\subsection{ARFoundation for AR applications}\label{subsec:arfoundation-for-ar-applications}
+ARFoundation is a Unity framework that enables developers to create cross-platform AR applications.
+By integrating the functionality of Apple's ARKit and Google's ARCore, ARFoundation makes it possible
+to develop a single application that can run on both iOS and Android devices.
+
+\paragraph{Cross-platform}
+One of the main features of ARFoundation is its ability to abstract the API
+specifications of ARKit and ARCore, allowing developers to write code once to run applications on both platforms.
+This reduces development time and simplifies code maintenance.
+
+\paragraph{Detection and tracking}
+ARFoundation supports tracking the position and orientation of the device, detecting horizontal and
+vertical surfaces, anchoring virtual objects in real space and detecting 3D images and objects,
+all essential functionalities for creating immersive and interactive AR experiences.
+
+\subsection{Applications}\label{subsec:applications}
+The use of sensors to detect depth images with a smartphone is applied in various fields,
+from object detection and tracking, to health monitoring and assisting visually impaired people.
+
+In~\cite{real-time-sign-language-translation}, the smartphone is used as a real-time sign language translator.
+Depth images collected by the smartphone's depth sensor are pre-processed
+and then classified by a MobileNet+LSTM deep-learning model directly on the mobile device.
+
+Another tool of assistance for visually impaired people can be found in~\cite{smartphone-visual-assistance-system},
+where a new solution for spatial orientation and navigation is proposed.
+In this work the authors make use of techniques for distance detection and object recognition from RGB images,
+using the MiDaS 2 Lite model to extrapolate a depth map and the MobiNet3 neural network for object classification.
+
+Similar to the previous work, an object recognition system is proposed in~\cite{object-detection-using-smartphone},
+but this time based on the depth sensor of the smartphone and not on RGB images.
+
+A remarkable result was obtained in~\cite{smartphone-depth-for-medical-applications},
+where the TrueDepth scanner of an iPhone 12 Pro was used to obtain a depth scan of
+a stoma model in order to detect its contours, achieving a remarkable accuracy (<2mm).
+In fact, it turns out that the TrueDepth scanner has a higher
+accuracy and density of infrared dot projection than the LiDAR sensor.
+
+However, it should be noted that the TrueDepth scanner is the one used
+for FaceID and is located on the front face of the smartphone,
+which makes it unusable together with the camera or any other sensor located on the back face of the smartphone.

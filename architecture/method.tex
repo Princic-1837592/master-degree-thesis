@@ -1,0 +1,49 @@
+\section{Method}\label{sec:method}
+As of now, the project has made progress towards user-friendliness and accuracy, and all that is needed
+is a smartphone with the application installed and a paper sheet.
+The pipeline is still divided into a preliminary phase and a real-time phase,
+but now all the work is done by a single device instead of three different devices.
+
+Launching the application immediately gives visual feedback from the camera on the smartphone screen:
+the user directly sees what they are framing with the camera, making the preliminary phase much faster and easier,
+also thanks to a visual guide in transparency on the image, which is used to aim at the keyboard.
+
+Once the keyboard is centered in the visual guide, the user can press a button on the application interface
+to start the process of detecting the keyboard.
+The detection process takes less than a second, and once it is finished, the screen will display in transparency the
+keys detected by the application, so that the user can assess whether the process was successful and,
+if they are not satisfied, repeat it as many times as necessary.
+
+Both the visual guide and the keys in transparency can be hidden either before or after the preliminary step.
+When the user is satisfied with the result of the preliminary stage, they can immediately start playing on the
+semi-virtual keyboard, without any other interaction with the application.
+
+The entire process is shown in~\autoref{fig:keyrtual-smartphone-method}
+and the implementation details are explained in the following paragraphs.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/application/architecture}
+	\caption{Architecture of the current version}
+	\label{fig:keyrtual-smartphone-method}
+\end{figure}
+
+\subsection{Constraints}\label{subsec:constraints}
+
+\paragraph{General constraints}
+The sheet should be a common white A4 sheet and the keyboard should be drawn in black or blue for better contrast.
+There are no constraints on the contrast between the paper sheet and table due to the new background subtraction method.
+
+The phone should be placed at a sufficient distance to frame the paper and hands in their entirety (experimentally
+we have found that about 40 cm is fine) in a way such that the user, relative to the camera, appears to be on the top side
+of the image and the paper on the bottom side of the image.
+
+\paragraph{Hardware prerequisites}
+No special prerequisites are required to run the application.
+Thanks to the possibility of increasing and decreasing the FPS with which to run MediaPipe,
+which is the most computationally demanding component,
+it is possible to sacrifice some response speed to ensure that the application works on low-end phones.
+
+\input{architecture/preliminary-phase}
+
+\input{architecture/real-time-phase}

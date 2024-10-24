@@ -1,0 +1,46 @@
+\section{Unity}\label{sec:unity}
+Unity is a professional, robust and versatile game development platform
+that has gained widespread popularity~\cite{unity-technical-survey} for its ability to create both 2D and 3D applications.
+The Unity editor is cross-platform, being supported on Windows, macOS and Linux, and its engine supports builds
+for more than 19 different platforms, including mobile and desktop devices, consoles and VR devices.
+
+Developed by Unity Technologies, it has evolved into a powerful tool for implementing
+high performance applications~\cite{unity-interview-high-speed}, used by developers worldwide for a variety of projects,
+ranging from games to simulations, augmented reality~\cite{marco-ar, marco-ar-mano},
+and virtual reality~\cite{marco-vr} applications.
+
+Augmented reality applications made with Unity can easily be used in a
+classroom~\cite{ar-application-in-classroom-taxonomy, ar-for-preschool-children, vr-and-ar-for-learning, educational-ar}
+as an innovative and interactive teaching method for children, with examples of its usage in the teaching of subjects such as
+Astronomy~\cite{ar-astronomy}, Volcanology~\cite{ar-volcanology}, Engineering~\cite{ar-engineering},
+Medicine~\cite{ar-medicine} and more~\cite{ar-microeconomics, ar-animals}.
+This makes Unity the perfect tool for our project.
+
+Our application requires the use of the OpenCV and MediaPipe libraries, and is written entirely in \texttt{C\#} within the Unity Engine.
+This led us to the adoption of the corresponding plugins within the game engine.
+The exact versions of Unity and plugins used within the project are:
+\begin{itemize}
+	\item Unity Editor: 2022.3.18f1
+	\item OpenCV for Unity: 2.5.8
+	\item MediaPipe for Unity: 0.14.1
+\end{itemize}
+
+\subsection{OpenCV}\label{subsec:opencv-for-unity}
+OpenCV for Unity is a very popular plugin for using OpenCV within the Unity development environment.
+It can be purchased from the Unity Asset Store and easily imported into a project.
+From there, its use differs little from what it would be in \texttt{C++} or \texttt{Python}:
+it supports practically all the functions and constants present in the original module,
+while maintaining an API identical to its \texttt{C++} counterpart.
+
+The support for WebCamTexture makes OpenCV for Unity easy to use in applications that need to perform real-time image processing,
+which makes it an excellent choice for our project.
+
+\subsection{MediaPipe}\label{subsec:mediapipe-for-unity}
+MediaPipe for Unity is a native plugin which ports the \texttt{C++} MediaPipe API to \texttt{C\#}, one by one,
+so that it can easily be used within the Unity development environment.
+It can be installed from the documentation page and be directly imported into the project.
+Thanks to the precise documentation, the various example scenes and the clear and comprehensive tutorial,
+using MediaPipe in Unity is quick and easy.
+
+This library supports all major desktop operating systems (Linux, macOS and Windows) as well as the mobile systems
+Android and iOS, for which GPU mode can also be enabled, which is why we chose to use this library in our project.
